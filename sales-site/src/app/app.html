@@ -1,0 +1,418 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<div class="page">
+  <header class="site-header">
+    <div class="logo-block">
+      <img
+        src="/omar-edits-logo.png"
+        alt="Omar Edits"
+        class="logo-avatar"
+      />
+      <img src="/omar-edits-text.png" alt="Omar Edits" class="logo-text-img" />
+    </div>
+    <nav class="main-nav">
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Editing that keeps viewers watching.</h1>
+      <p class="sub">
+        For creators who want to scale their content and get more out of every upload.
+      </p>
+
+      <div class="hero-actions hero-actions-centered">
+        <a href="#book-call" class="btn primary">Apply now</a>
+        <a href="#work" class="btn ghost">View Work</a>
+      </div>
+
+      <p class="section-sub creators-heading">
+        Trusted by Creators like:
+      </p>
+
+      <div class="creator-marquee-wrap">
+        <div class="creator-marquee">
+          <article class="creator-card">
+        <img src="/creators/eman-sv2-logo.png" alt="SV2" />
+        <div class="creator-meta">
+          <span class="creator-name">SV2</span>
+          <span class="creator-stats">5.25M+ subscribers</span>
+        </div>
+      </article>
+      <article class="creator-card">
+        <img src="/creators/sv2-fc.png" alt="SV2 FC" />
+        <div class="creator-meta">
+          <span class="creator-name">SV2 FC</span>
+          <span class="creator-stats">568K subscribers</span>
+        </div>
+      </article>
+      <article class="creator-card">
+        <img src="/creators/dani-visser.png" alt="Dani Visser" />
+        <div class="creator-meta">
+          <span class="creator-name">Dani Visser</span>
+          <span class="creator-stats">158K subscribers</span>
+        </div>
+      </article>
+      <article class="creator-card">
+        <img src="/creators/chuffsters.png" alt="Chuffsters" />
+        <div class="creator-meta">
+          <span class="creator-name">Chuffsters</span>
+          <span class="creator-stats">1.1M+ subscribers</span>
+        </div>
+      </article>
+      <article class="creator-card">
+        <img src="/creators/eric-da-silva.png" alt="Eric Da Silva" />
+        <div class="creator-meta">
+          <span class="creator-name">Eric Da Silva</span>
+          <span class="creator-stats">96K+ subscribers</span>
+        </div>
+      </article>
+      <article class="creator-card">
+        <img src="/creators/efron.png" alt="Efron" />
+        <div class="creator-meta">
+          <span class="creator-name">Efron</span>
+          <span class="creator-stats">515K+ subscribers</span>
+        </div>
+      </article>
+          <!-- duplicate for seamless loop -->
+          <article class="creator-card">
+            <img src="/creators/eman-sv2-logo.png" alt="SV2" />
+            <div class="creator-meta">
+              <span class="creator-name">SV2</span>
+              <span class="creator-stats">5.25M+ subscribers</span>
+            </div>
+          </article>
+          <article class="creator-card">
+            <img src="/creators/sv2-fc.png" alt="SV2 FC" />
+            <div class="creator-meta">
+              <span class="creator-name">SV2 FC</span>
+              <span class="creator-stats">568K subscribers</span>
+            </div>
+          </article>
+          <article class="creator-card">
+            <img src="/creators/dani-visser.png" alt="Dani Visser" />
+            <div class="creator-meta">
+              <span class="creator-name">Dani Visser</span>
+              <span class="creator-stats">158K subscribers</span>
+            </div>
+          </article>
+          <article class="creator-card">
+            <img src="/creators/chuffsters.png" alt="Chuffsters" />
+            <div class="creator-meta">
+              <span class="creator-name">Chuffsters</span>
+              <span class="creator-stats">1.1M+ subscribers</span>
+            </div>
+          </article>
+          <article class="creator-card">
+            <img src="/creators/eric-da-silva.png" alt="Eric Da Silva" />
+            <div class="creator-meta">
+              <span class="creator-name">Eric Da Silva</span>
+              <span class="creator-stats">96K+ subscribers</span>
+            </div>
+          </article>
+          <article class="creator-card">
+            <img src="/creators/efron.png" alt="Efron" />
+            <div class="creator-meta">
+              <span class="creator-name">Efron</span>
+              <span class="creator-stats">515K+ subscribers</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section muted" id="work">
+    <h2>Proof beats promises.</h2>
+   
+
+    <div class="work-filters">
+      <button
+        type="button"
+        class="work-filter-btn"
+        [class.active]="activeFilter === 'all'"
+        (click)="setFilter('all')"
+      >
+        All
+      </button>
+      <button
+        type="button"
+        class="work-filter-btn"
+        [class.active]="activeFilter === 'longform'"
+        (click)="setFilter('longform')"
+      >
+        Long‑form
+      </button>
+      <button
+        type="button"
+        class="work-filter-btn"
+        [class.active]="activeFilter === 'shortform'"
+        (click)="setFilter('shortform')"
+      >
+        Shorts
+      </button>
+    </div>
+
+    <div class="work-videos">
+      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'longform'">
+        <iframe
+          src="https://www.youtube.com/embed/sKihPk3hgtw"
+          title="SV2 FC video (227K views)"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <div class="work-video-meta work-video-meta-split">
+          <span class="work-video-title">SV2 FC • Reacts video</span>
+          <span class="work-video-stats">250K+ views</span>
+        </div>
+      </article>
+
+      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'longform'">
+        <iframe
+          src="https://www.youtube.com/embed/A4IuTI-kbcc"
+          title="Eric Da Silva video (140K views)"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <div class="work-video-meta work-video-meta-split">
+          <span class="work-video-title">Eric Da Silva • IRL</span>
+          <span class="work-video-stats">140K views</span>
+        </div>
+      </article>
+
+      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'longform'">
+        <iframe
+          src="https://www.youtube.com/embed/lg-qe3KhW50"
+          title="Dani Visser video (66K views)"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <div class="work-video-meta work-video-meta-split">
+          <span class="work-video-title">Dani Visser • Gaming</span>
+          <span class="work-video-stats">66K views</span>
+        </div>
+      </article>
+
+      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'shortform'">
+                <div style="max-width: 40vh;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;">
+
+        <iframe
+          src="https://www.youtube.com/embed/_0wrCCM4YBk"
+          title="SV2 short (13M+ views)"
+           style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        </div>
+        </div>
+        <div class="work-video-meta work-video-meta-split">
+          <span class="work-video-title">SV2 • YouTube Short</span>
+          <span class="work-video-stats">13M+ views</span>
+        </div>
+      </article>
+
+      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'shortform'">
+        <div style="max-width: 40vh;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;">
+          <iframe src="https://www.youtube.com/embed/gpVWwopqb8Q?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div></div>
+        <div class="work-video-meta work-video-meta-split">
+          <span class="work-video-title">Chuffsters • Shorts</span>
+          <span class="work-video-stats">98K views</span>
+        </div>
+      </article>
+
+      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'shortform'">
+        <div style="max-width: 40vh;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;">       
+           <iframe src="https://www.youtube.com/embed/e16MriqyhpA?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div></div>
+        <div class="work-video-meta work-video-meta-split">
+          <span class="work-video-title">SV2 • Shorts</span>
+          <span class="work-video-stats">6.3M views</span>
+        </div>
+
+        
+      </article>
+    </div>
+
+    
+ 
+    
+  </section>
+
+   <div class="hero-stats stats-centered">
+      <div class="stat">
+        <span class="value">200+</span>
+        <span class="label">Videos edited</span>
+      </div>
+      <div class="stat">
+        <span class="value">3+ years</span>
+        <span class="label">Experience</span>
+      </div>
+      <div class="stat">
+        <span class="value">27M+</span>
+        <span class="label">Client views</span>
+      </div>
+    </div>
+  <section class="section section-centered" id="testimonials">
+    <h2>Testimonials & reviews</h2>
+    <div class="reviews">
+      <article class="review-card">
+        <div class="review-header">
+          <img src="/creators/eman-sv2-logo.png" alt="SV2" class="review-avatar" />
+          <div>
+            <div class="review-author-row">
+              <span class="review-author">SV2</span>
+              <span class="review-verified">✔</span>
+            </div>
+            <div class="review-meta">5.18M subscribers</div>
+          </div>
+        </div>
+        <p class="review-quote">
+          “Great work and fast turnaround with the work! Communication was really good too.”
+        </p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-header">
+          <img src="/creators/dani-visser.png" alt="Dani Visser" class="review-avatar" />
+          <div>
+            <div class="review-author-row">
+              <span class="review-author">Dani Visser</span>
+              <span class="review-verified">✔</span>
+            </div>
+            <div class="review-meta">158K subscribers</div>
+          </div>
+        </div>
+        <p class="review-quote">
+          “Really good editor! Took a bit longer than expected.”
+        </p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-header">
+          <img src="/creators/eric-da-silva.png" alt="Eric Da Silva" class="review-avatar" />
+          <div>
+            <div class="review-author-row">
+              <span class="review-author">Eric Da Silva</span>
+              <span class="review-verified">✔</span>
+            </div>
+            <div class="review-meta">96K+ subscribers</div>
+          </div>
+        </div>
+        <p class="review-quote">
+          “I want to sincerely thank you from the bottom of my heart for editing the video. I really appreciate it!”
+        </p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-header">
+          <img src="/creators/footsplayer-logo.png" alt="Footsplayer" class="review-avatar" />
+          <div>
+            <div class="review-author-row">
+              <span class="review-author">Footsplayer</span>
+              <span class="review-verified">✔</span>
+            </div>
+            <div class="review-meta">453 subscribers</div>
+          </div>
+        </div>
+        <p class="review-quote">
+          “Omar is a very talented editor. He is reliable, has clear communication and is fast with
+          delivery. I really recommend you to work with him!”
+        </p>
+      </article>
+    </div>
+  </section>
+
+ 
+
+  
+ 
+
+  <section class="section muted">
+    <h2>Our collaboration process</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-number">1</span>
+        <h3>Apply Form</h3>
+        <p>Fill out a quick 2-minute form so we can understand your channel and goals.</p>
+      </div>
+         <div class="step">
+        <span class="step-number">2</span>
+        <h3>Strategy Call</h3>
+        <p>
+          30-minute call to dive deeper into your content style and editing needs.
+        </p>
+      </div>
+      <div class="step">
+        <span class="step-number">3</span>
+        <h3>First edit</h3>
+        <p>You send raw footage, I create a first edit in your style.</p>
+      </div>
+   
+    
+      <div class="step">
+        <span class="step-number">4</span>
+        <h3>Scale</h3>
+        <p>We build a long-term editing system.</p>
+      </div>
+    </div>
+    <div class="center-cta">
+      <a href="#contact" class="btn primary">Let's Work!</a>
+    </div>
+  </section>
+
+ 
+ 
+
+
+  <section class="section section-centered" id="book-call">
+    <h2>Book your free editing strategy call</h2>
+    <p class="section-sub">
+      For creators who want to scale their content and get more out of every upload.
+    </p>
+    <p class="section-sub book-sub">Questions take less than 2 minutes.</p>
+
+    <div class="tally-container">
+      <iframe
+        src="https://tally.so/embed/LZWEG1?alignLeft=1&hideTitle=1&dynamicHeight=1"
+        loading="lazy"
+        width="100%"
+        height="400"
+        title="Strategy Call"
+      ></iframe>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-content">
+      <a href="https://x.com/OmarIm25" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Twitter / X">
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+        <span>X / Twitter</span>
+      </a>
+      <a href="mailto:omarimam31@gmail.com" class="footer-link">
+        <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        <span>omarimam31&#64;gmail.com</span>
+      </a>
+    </div>
+  </footer>
+
+</div>

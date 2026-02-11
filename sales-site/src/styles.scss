@@ -1,0 +1,11 @@
+/* Global: no white borders, dark theme */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #030712;
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
