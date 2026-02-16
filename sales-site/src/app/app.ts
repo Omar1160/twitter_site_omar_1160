@@ -24,7 +24,7 @@ export class App {
 
   contactForm!: FormGroup;
   callForm!: FormGroup;
-  activeFilter: 'all' | 'longform' | 'shortform' = 'all';
+  activeFilter: 'longform' | 'shortform' = 'longform';
 
   constructor(
     private fb: FormBuilder,
@@ -42,7 +42,7 @@ export class App {
     });
   }
 
-  setFilter(filter: 'all' | 'longform' | 'shortform'): void {
+  setFilter(filter: 'longform' | 'shortform'): void {
     this.activeFilter = filter;
   }
 

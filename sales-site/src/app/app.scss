@@ -302,6 +302,19 @@ p {
   margin-top: 0.2rem;
 }
 
+.stat-note {
+  display: block;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.35rem;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.stat-featured {
+  border-color: rgba(148, 163, 184, 0.45);
+}
+
 .hero-stats-cta {
   text-align: center;
   margin-top: 1.25rem;

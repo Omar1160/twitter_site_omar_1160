@@ -35,6 +35,7 @@
 
   <section class="hero" id="home">
     <div class="hero-content">
+      <span class="badge">Long-form only</span>
       <h1>Editing that keeps viewers watching.</h1>
       <p class="sub">
         For creators who want to scale their content and get more out of every upload.
@@ -147,14 +148,6 @@
       <button
         type="button"
         class="work-filter-btn"
-        [class.active]="activeFilter === 'all'"
-        (click)="setFilter('all')"
-      >
-        All
-      </button>
-      <button
-        type="button"
-        class="work-filter-btn"
         [class.active]="activeFilter === 'longform'"
         (click)="setFilter('longform')"
       >
@@ -166,12 +159,12 @@
         [class.active]="activeFilter === 'shortform'"
         (click)="setFilter('shortform')"
       >
-        Shorts
+        Past work (Shorts)
       </button>
     </div>
 
     <div class="work-videos">
-      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'longform'">
+      <article class="work-video-card" *ngIf="activeFilter === 'longform'">
         <iframe
           src="https://www.youtube.com/embed/sKihPk3hgtw"
           title="SV2 FC video (227K views)"
@@ -185,7 +178,7 @@
         </div>
       </article>
 
-      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'longform'">
+      <article class="work-video-card" *ngIf="activeFilter === 'longform'">
         <iframe
           src="https://www.youtube.com/embed/A4IuTI-kbcc"
           title="Eric Da Silva video (140K views)"
@@ -199,7 +192,7 @@
         </div>
       </article>
 
-      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'longform'">
+      <article class="work-video-card" *ngIf="activeFilter === 'longform'">
         <iframe
           src="https://www.youtube.com/embed/lg-qe3KhW50"
           title="Dani Visser video (66K views)"
@@ -213,7 +206,7 @@
         </div>
       </article>
 
-      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'shortform'">
+      <article class="work-video-card" *ngIf="activeFilter === 'shortform'">
                 <div style="max-width: 40vh;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;">
 
         <iframe
@@ -232,7 +225,7 @@
         </div>
       </article>
 
-      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'shortform'">
+      <article class="work-video-card" *ngIf="activeFilter === 'shortform'">
         <div style="max-width: 40vh;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;">
           <iframe src="https://www.youtube.com/embed/gpVWwopqb8Q?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div></div>
         <div class="work-video-meta work-video-meta-split">
@@ -241,7 +234,7 @@
         </div>
       </article>
 
-      <article class="work-video-card" *ngIf="activeFilter === 'all' || activeFilter === 'shortform'">
+      <article class="work-video-card" *ngIf="activeFilter === 'shortform'">
         <div style="max-width: 40vh;"><div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 177.7778%;">       
            <iframe src="https://www.youtube.com/embed/e16MriqyhpA?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div></div>
         <div class="work-video-meta work-video-meta-split">
@@ -267,9 +260,10 @@
       <span class="value">3+ years</span>
       <span class="label">Experience</span>
     </div>
-    <div class="stat">
-      <span class="value">27M+</span>
-      <span class="label">Client views</span>
+    <div class="stat stat-featured">
+      <span class="value">1M+</span>
+      <span class="label">Long-form views</span>
+      <span class="stat-note">+ 25M+ short-form (past work)</span>
     </div>
   </div>
   <div class="hero-stats-cta">
