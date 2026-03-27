@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&display=swap');
+
+/* Global: no white borders, dark theme */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #030712;
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" fill="none">
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="480" y2="320">
+      <stop stop-color="#f0fdf4"/>
+      <stop offset="1" stop-color="#e0f2fe"/>
+    </linearGradient>
+    <linearGradient id="up6" x1="240" y1="200" x2="240" y2="80">
+      <stop stop-color="#22c55e"/>
+      <stop offset="1" stop-color="#16a34a"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="320" rx="20" fill="url(#bg6)"/>
+  <rect x="140" y="72" width="200" height="120" rx="16" fill="#fff" stroke="#e2e8f0" stroke-width="2"/>
+  <path d="M180 120h120M180 140h100M180 160h80" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="240" cy="200" r="44" fill="url(#up6)" opacity="0.2"/>
+  <path d="M240 128v48M216 168l24 24 24-24" stroke="url(#up6)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="200" y="216" width="80" height="28" rx="8" fill="#16a34a"/>
+  <path d="M228 230h24" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <rect x="60" y="180" width="56" height="72" rx="8" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+  <path d="M76 200h24M76 216h24" stroke="#3b82f6" stroke-width="3" stroke-linecap="round"/>
+  <rect x="364" y="180" width="56" height="72" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <path d="M380 208h24" stroke="#d97706" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="400" cy="100" r="8" fill="#22c55e"/>
+  <path d="M396 100l4 4 8-10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+</svg>
