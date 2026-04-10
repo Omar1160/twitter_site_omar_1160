@@ -612,6 +612,28 @@ p {
   gap: 0.25rem;
 }
 
+.review-card-screenshot {
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+}
+
+.review-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+}
+
+.review-translation {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0.5rem 0.75rem 0.5rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
 .review-quote {
   font-size: 0.92rem;
   line-height: 1.5;
