@@ -163,12 +163,34 @@
   mix-blend-mode: lighten;
 }
 
+.leadrix-icon {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.logo-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1;
+}
+
 .logo-text {
-  font-size: 1.65rem;
+  font-size: 1.45rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: #f3f4f6;
-  line-height: 1;
+  line-height: 1.1;
+}
+
+.logo-subtext {
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+  text-transform: uppercase;
 }
 
 .main-nav {
