@@ -42,40 +42,40 @@ export class App {
     clientOnlyLabel?: string;
   }[] = [
     {
-      title: 'Research & Strategy',
+      title: 'Deep Research',
       description:
-        'We analyze your niche, audience and competitors to find content that attracts your ideal clients.',
+        'We study your niche and competitors to find what works so every video is built to perform.',
       image: '/process/step-1.svg',
     },
     {
-      title: 'Content Ideas & Planning',
+      title: 'Content Calendar',
       description:
-        'We create video ideas and a content plan focused on growth and lead generation.',
+        'We plan a full month of video ideas, titles and hooks. You always know what\'s coming next.',
       image: '/process/step-2.svg',
     },
     {
-      title: 'Script Writing',
+      title: 'Hook & Script',
       description:
-        'We write scripts with strong hooks and structure to maximize retention.',
+        'We write your scripts from hook to CTA, built to keep viewers watching till the end.',
       image: '/process/step-3.svg',
     },
     {
-      title: 'Recording',
+      title: 'You Hit Record',
       description:
-        'You record content in batches (2–3 hours per month).',
+        'You record in just 2–3 hours per month. We handle everything else.',
       image: '/process/step-4.svg',
       clientOnlyLabel: 'You only record in batches',
     },
     {
-      title: 'Editing & Thumbnails',
+      title: 'Post Production',
       description:
-        'We edit, add subtitles, sound effects and design thumbnails for clicks and watch time.',
+        'We fully edit your video and design a thumbnail so your content stands out and keeps viewers watching.',
       image: '/process/step-5.svg',
     },
     {
-      title: 'Publishing & Optimization',
+      title: 'Upload & Grow',
       description:
-        'We upload, optimize SEO and publish content consistently to grow your channel.',
+        'We upload, optimise SEO and schedule your videos so your channel grows every week.',
       image: '/process/step-6.svg',
     },
   ];
@@ -193,7 +193,7 @@ export class App {
     return this.pointerInsideProcessSection(e.clientX, e.clientY);
   }
 
-  /** Sectie staat minstens deels in beeld — lock geldt overal op het donkere vlak (screenshot-gebied). */
+  /** Sectie is pas actief als het midden van het scherm binnen de sectie valt. */
   private processScrollCaptureActive(): boolean {
     const el = this.processSection()?.nativeElement;
     if (!el) {
@@ -201,7 +201,8 @@ export class App {
     }
     const r = el.getBoundingClientRect();
     const vh = window.innerHeight;
-    return r.bottom > 4 && r.top < vh - 4;
+    const mid = vh * 0.5;
+    return r.top < mid && r.bottom > mid;
   }
 
   /** Tot en met stap 5 (index 0–4): pagina niet verder naar beneden */
@@ -256,7 +257,7 @@ export class App {
      * Accumulator: snelle grote scroll wordt tot één stap afgebroken (geen overslaan).
      * Pas na drempel: +1 stap, accum leeg, lange pauze.
      */
-    const STEP_WHEEL_ACCUM = 52;
+    const STEP_WHEEL_ACCUM = 80;
     this.wheelDownAccum += dy;
     if (this.wheelDownAccum < STEP_WHEEL_ACCUM) {
       return;
@@ -273,7 +274,7 @@ export class App {
       return;
     }
     this.activeProcessStep += 1;
-    this.bumpProcessCooldown(580);
+    this.bumpProcessCooldown(700);
     this.applyProcessStepVisuals();
     this.nudgePageAfterProcessStep();
     this.cdr.detectChanges();
@@ -360,7 +361,7 @@ export class App {
       return;
     }
 
-    const STEP_TOUCH_ACCUM = 44;
+    const STEP_TOUCH_ACCUM = 65;
     if (this.touchSwipeAccum < STEP_TOUCH_ACCUM) {
       this.touchLastY = y;
       this.touchLastX = x;
