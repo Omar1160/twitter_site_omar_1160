@@ -424,19 +424,48 @@ p {
 }
 
 .creator-marquee {
+  --creator-marquee-gap: 1.65rem;
   display: flex;
-  gap: 1.2rem;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
   width: max-content;
-  animation: creator-marquee 45s linear infinite;
+  animation: creator-marquee 38s linear infinite;
+  will-change: transform;
+}
+
+.creator-marquee-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: var(--creator-marquee-gap);
+  flex-shrink: 0;
+  padding-right: var(--creator-marquee-gap);
 }
 
 .creator-marquee:hover {
   animation-play-state: paused;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .creator-marquee {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    row-gap: 0.75rem;
+  }
+  .creator-marquee-group {
+    padding-right: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 @keyframes creator-marquee {
   0% {
-    transform: translateX(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
     transform: translateX(-50%);
@@ -468,8 +497,8 @@ p {
 }
 
 .creator-card img {
-  width: 40px;
-  height: 40px;
+  width: 56px;
+  height: 56px;
   border-radius: 999px;
   object-fit: cover;
   border: 1px solid rgba(148, 163, 184, 0.6);
@@ -488,6 +517,34 @@ p {
 .creator-stats {
   font-size: 0.78rem;
   color: #9ca3af;
+}
+
+.stats-section {
+  padding: 1.25rem 0 1.5rem;
+  text-align: center;
+}
+
+.stats-highlight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stats-value {
+  font-size: clamp(2.75rem, 8vw, 4.5rem);
+  font-weight: 800;
+  color: #f9fafb;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.stats-sublabel {
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-weight: 400;
+  max-width: 380px;
+  line-height: 1.5;
 }
 
 .work-videos {
@@ -586,6 +643,42 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+}
+
+.deliverables-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.deliverable-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(30, 64, 175, 0.25);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  .deliverable-icon {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #f3f4f6;
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.88rem;
+    color: #94a3b8;
+    margin: 0;
+    line-height: 1.55;
+  }
 }
 
 .steps {
