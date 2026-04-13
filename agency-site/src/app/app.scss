@@ -384,6 +384,23 @@ p {
   padding: 0.35rem 0 var(--space-md);
 }
 
+.hero-vsl-wrap {
+  margin: 2rem auto 0;
+  max-width: 780px;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.hero-vsl {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 1rem;
+}
+
 .hero-content {
   text-align: center;
 }
