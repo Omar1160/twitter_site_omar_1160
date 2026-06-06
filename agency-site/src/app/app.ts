@@ -11,17 +11,10 @@ import {
 } from '@angular/core';
 import { ReactiveFormsModule, FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { NgIf } from '@angular/common';
-
-declare global {
-  interface Window {
-    Calendly: any;
-  }
-}
 
 @Component({
   selector: 'app-root',
-  imports: [ReactiveFormsModule, HttpClientModule, NgIf],
+  imports: [ReactiveFormsModule, HttpClientModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
@@ -89,7 +82,6 @@ export class App {
   submitError = '';
 
   contactForm!: FormGroup;
-  callForm!: FormGroup;
   activeFilter: 'longform' | 'shortform' = 'longform';
 
   private readonly destroyRef = inject(DestroyRef);
@@ -114,10 +106,6 @@ export class App {
       email: ['', [Validators.required, Validators.email]],
       channelUrl: ['', [Validators.required]],
       message: ['', [Validators.required, Validators.minLength(10)]],
-    });
-    this.callForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.email]],
     });
 
     afterNextRender(() => {
@@ -434,14 +422,6 @@ export class App {
 
   setFilter(filter: 'longform' | 'shortform'): void {
     this.activeFilter = filter;
-  }
-
-  onCallFormSubmit(): void {
-    if (this.callForm.invalid) {
-      this.callForm.markAllAsTouched();
-      return;
-    }
-    document.querySelector('.calendly-inline-widget')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   onSubmit(): void {
