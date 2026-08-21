@@ -128,6 +128,14 @@
   gap: 0.55rem;
 }
 
+.logo-text {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f3f4f6;
+  line-height: 1.1;
+}
+
 /* Twitter-style circular avatar */
 .logo-avatar {
   width: 40px;
@@ -241,6 +249,35 @@ p {
   text-align: center;
 }
 
+.headline-30 {
+  font-size: clamp(1.75rem, 2.9vw, 2.95rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  margin: 0.15rem auto 0.85rem;
+  color: #f9fafb;
+  font-family:
+    Montserrat,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+}
+
+.headline-30-line {
+  display: block;
+}
+
+.headline-30-em {
+  color: rgba(226, 232, 240, 0.98);
+}
+
+.headline-30-sub {
+  max-width: 720px;
+  font-size: 1.05rem;
+}
+
 .hero .sub {
   margin-bottom: 0;
   margin-top: 0.25rem;
@@ -249,14 +286,18 @@ p {
 .badge {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.25rem 0.7rem;
+  gap: 0.45rem;
+  padding: 0.45rem 1.1rem;
   border-radius: 999px;
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  font-size: 0.8rem;
-  color: #e5e7eb;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(203, 213, 225, 0.42);
+  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.5);
+  font-size: clamp(0.9rem, 1.05vw, 1.02rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #f3f4f6;
   margin-bottom: 1rem;
+  line-height: 1.35;
 }
 
 .hero-actions {
@@ -408,8 +449,9 @@ p {
 
 .creators-full .creators-heading {
   margin-top: 0;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.65rem;
   text-align: center;
+  font-size: 1.05rem;
 }
 
 .creators-heading {
@@ -476,12 +518,13 @@ p {
   flex-shrink: 0;
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  padding: 0.55rem 0.9rem;
+  gap: 0.85rem;
+  padding: 0.75rem 1.35rem;
+  min-height: 3.5rem;
   border-radius: 999px;
   background: rgba(15, 23, 42, 0.95);
   border: 1px solid rgba(148, 163, 184, 0.36);
-  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.65);
+  box-shadow: 0 14px 36px rgba(2, 6, 23, 0.65);
   transform: translateY(0);
   transition:
     transform 0.2s ease,
@@ -490,9 +533,9 @@ p {
 }
 
 .creator-card:hover {
-  transform: translateY(-2px) scale(1.06);
-  background: rgba(30, 58, 138, 0.95);
-  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px) scale(1.05);
+  background: rgba(148, 163, 184, 0.14);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.35);
   z-index: 2;
 }
 
@@ -501,21 +544,23 @@ p {
   height: 56px;
   border-radius: 999px;
   object-fit: cover;
-  border: 1px solid rgba(148, 163, 184, 0.6);
+  border: 2px solid rgba(148, 163, 184, 0.55);
 }
 
 .creator-meta {
   display: flex;
   flex-direction: column;
+  gap: 0.1rem;
 }
 
 .creator-name {
-  font-size: 0.92rem;
+  font-size: 1.08rem;
   font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .creator-stats {
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   color: #9ca3af;
 }
 
@@ -1056,24 +1101,27 @@ textarea:focus {
   }
 
   .creator-card {
-    padding: 0.45rem 0.7rem;
+    padding: 0.6rem 1rem;
+    min-height: 3rem;
+    gap: 0.65rem;
   }
 
   .creator-card img {
-    width: 32px;
-    height: 32px;
+    width: 44px;
+    height: 44px;
   }
 
   .creator-name {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 
   .creator-stats {
-    font-size: 0.72rem;
+    font-size: 0.8rem;
   }
 
   .creator-marquee {
-    gap: 0.75rem;
+    --creator-marquee-gap: 1rem;
+    animation-duration: 32s;
   }
 
   .stat {
